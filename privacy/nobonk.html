@@ -1,12 +1,25 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NoBonk — Privacy Policy</title>
 <style>body{background:#07090d;color:#e8eefb;font:17px/1.65 -apple-system,'Segoe UI',Roboto,sans-serif;margin:0}.w{max-width:720px;margin:0 auto;padding:48px 22px}h1{font-size:30px;letter-spacing:-.02em}h2{font-size:19px;margin-top:28px}p,li{color:#cbd6e6}.k{font:600 12px ui-monospace,monospace;letter-spacing:.18em;text-transform:uppercase;color:#38bdf8}a{color:#38bdf8}</style></head><body><div class="w">
-<div class="k">Privacy policy · effective 2026-09-06</div><h1>NoBonk</h1>
-<p>NoBonk uses your phone's camera and an on-device vision model to warn you before you walk into a person or obstacle. All processing happens on the phone.</p>
-<h2>What we collect</h2><p><b>Nothing.</b> NoBonk has no accounts, no analytics, no advertising SDKs, and makes no network requests. The app does not request the Internet permission.</p>
-<h2>What stays on your device</h2><p>The detection-event history and your settings are stored only in the app's private storage on your phone. You can delete them at any time from inside the app, or by uninstalling it.</p>
-<h2>Optional location tag (off by default)</h2><p>If you turn it on in the history screen, NoBonk stores a <b>coarse</b> location with each close-call event so a map of your close-call spots can be shown. It stays on the device, can be switched off again, and all stored locations can be deleted at any time. Precise location is never requested.</p>
-<h2>Camera and sensors</h2><p>Camera frames and motion-sensor readings are processed in memory on the device and are never saved as images or uploaded anywhere.</p>
-<h2>Children</h2><p>NoBonk was built by a student for science-fair and app-challenge use. It does not knowingly collect personal information from anyone, including children.</p>
-<h2>Changes and contact</h2><p>If this policy changes, the new version will be posted at this address with a new effective date. Questions: open an issue at <a href="https://github.com/krishavh">github.com/krishavh</a>.</p>
-<p style="color:#67788f;font-size:13px;margin-top:36px">Account holder: Haarith Devarajan (parent). Developer: Krishav Haarith.</p>
+<div class="k">Privacy policy · effective 2026-09-13</div>
+<p><img src="nobonk-icon.png" width="64" height="64" alt="NoBonk icon" style="border-radius:16px"></p><h1>NoBonk</h1>
+<p>NoBonk is an experimental awareness aid. Its on-device camera analysis can suggest possible people or obstacles, but it can miss hazards or give false alerts. It is not a safety device or a replacement for looking up.</p>
+<h2>Camera processing stays on your phone</h2>
+<p>Camera frames and motion-sensor readings are processed in memory. NoBonk does not save photos or video, upload frames or history, or include accounts, advertising or analytics. The app does not request Internet or microphone permission. Android detection can continue in a user-started camera service while another app is open; Stop ends that scanning session.</p>
+<h2>What stays on your device</h2>
+<p>NoBonk stores settings, your safety acknowledgment, update-prompt preferences and a measured processing-provider choice in private local storage. Foreground scanning can store alert events: time, detected object type, approximate distance, alert level and approach status. This history is encrypted with an Android Keystore-managed key. Background scanning currently does not add history events.</p>
+<p>Use <b>Clear history</b> to remove event records and their optional location tags; the app reports a deletion failure. Settings can be changed in the app. Uninstalling removes the app's local data. Backup and transfer rules exclude private history and preferences in the reviewed release.</p>
+<h2>Optional walking mode (experimental)</h2>
+<p>In Android version 1.0.16 and later, walking mode is optional and off by default. If you enable it, NoBonk asks for Physical activity permission (ACTIVITY_RECOGNITION) to read the phone's step-detector events. You must then explicitly arm a session in the app. Steps and their timestamps are processed temporarily in memory to recognize sustained walking and start an obstacle scan during that session. They are not saved in history, uploaded, shared, sold, or used for advertising or fitness profiles. NoBonk does not access Health Connect or health records.</p>
+<p>The camera stays closed while waiting; an ongoing notification provides status and Stop. The waiting session expires after 30 minutes, with cleanup on the next process wake if the phone is asleep. Stop or reopening NoBonk ends the session. The app does not rearm after process death or reboot. Only the on/off setup preference is saved. You can disable the option or revoke Physical activity permission in Android Settings; manual background scanning remains available without this permission. Sensor support and screen-off behavior vary by phone.</p>
+<h2>Optional location tags</h2>
+<p>Location tagging is <b>off by default</b>. If you enable it and grant approximate-location permission, an event can include a coarse location for the local history map. No precise-location permission is requested. You can disable tagging or clear history at any time.</p>
+<h2>Separate phone services</h2>
+<p>Optional voice alerts give your phone's text-to-speech service a short phrase such as “Person on your left. Look up.” The phrase does not contain camera imagery or location. That service is separate software and may use its own network connection and privacy policy. Voice is off by default.</p>
+<p>NoBonk uses Google Play's in-app update library to ask the Play Store whether a newer version is available. Google Play handles availability, download and installation under Google's policies. Camera frames, alert history and location are not part of that request. You can dismiss an update suggestion; installing an update requires your action.</p>
+<h2>Audience and tester sign-up</h2>
+<p>NoBonk is intended for ages 13 and older. Joining the optional tester group happens on Google Groups, where your Google account is used to manage test access. Sending support email or opening a GitHub issue shares the information you choose to include with those services and the project maintainers. Please leave personal details out of public issues.</p>
+<h2>Questions and changes</h2>
+<p>Contact <a href="mailto:support@genwhy.ai">support@genwhy.ai</a> or visit <a href="https://github.com/krishavh/nobonk">NoBonk on GitHub</a>. Changes to this policy will appear at this address with a new effective date.</p>
+<p style="color:#9ca9bb;font-size:13px;margin-top:36px">Published by Haarith (parent). Created by Krishav.</p>
+<p><a href="https://nobonk.genwhy.ai/">Back to NoBonk</a></p>
 </div></body></html>
